@@ -1,0 +1,111 @@
+@use 'colors' as *;
+@use 'utils';
+
+.header {
+    padding: 25px 0;
+    background-image: url('assets/images/car.png');
+    background-repeat: no-repeat;
+    background-size: max(100%, 1600px) 100%;
+    background-attachment: fixed;
+}
+
+.header-content {
+    position: relative;
+    top: -30px;
+    margin-bottom: 355px;
+}
+
+h1, .header-sub-heading, .event-date {
+    font-family: 'Impact';
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 2%;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: black;
+    font-size: 70px;
+}
+
+.header-sub-heading {
+    color: black;
+    font-size: 52px;
+}
+
+.event-date {
+    display: block;
+    color: $gold;
+    font-size: 30px;
+}
+
+.divider-line {
+    width: 24%;
+    height: 0.8px;
+    background-color: black;
+    margin: 0 auto 10px auto;
+}
+
+.event-location {
+    font-family: 'Roboto Condensed';
+    font-weight: normal;
+    font-style: normal;
+    color: $dark-grey;
+    text-align: center;
+    @include utils.responsive-font-size(16px, 24px)
+}
+
+.scroll-down-button {
+    display: block;
+    transition: transform 0.3s;
+    margin: 0 auto;
+
+    &:hover {
+        transform: scale(1.075);
+    }
+
+    &:active {
+        transform: translateY(20px);
+    }
+}
+
+@media (min-width: 1750px) {
+    .scroll-down-button svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 850px) {
+    .header-content {
+        position: static;
+        margin-bottom: 150px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .header-sub-heading {
+        font-size: 30px;
+    }
+
+    .event-date {
+        font-size: 25px;
+    }
+
+    .event-location {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 438px) {
+    .header-content {
+        position: static;
+        margin-bottom: 225px;
+    }
+
+    .header {
+        padding-top: 100px;
+    }
+}

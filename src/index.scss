@@ -1,0 +1,39 @@
+@use 'styles/normalize';
+
+@use 'styles/fonts';
+
+@use 'styles/header';
+@use 'styles/navigation';
+
+@use 'styles/sections/info-section';
+@use 'styles/sections/track-section';
+@use 'styles/sections/trofeo-section';
+@use 'styles/sections/about-trofeo-section';
+@use 'styles/sections/trofeo-history-section';
+@use 'styles/sections/blog';
+@use 'styles/sections/winners-section';
+
+@use 'styles/footer';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.section-heading {
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.section-content-wrapper {
+    font-family: 'Roboto Condensed';
+    color: black;
+    width: 56%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1050px) {
+    .section-content-wrapper {
+        width: 95.8%;
+    }
+}

@@ -1,0 +1,59 @@
+@use '../utils';
+
+.track-section {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    height: 800px;
+    background-image: url('assets/images/tracksectionbg.png');
+    background-size: max(100%, 1600px) 100%;;
+}
+
+.track-section-content-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.track-section-text {
+    align-self: start;
+    width: 55%;
+}
+
+.track-section-heading {
+    margin-bottom: 30px;
+}
+
+.track-section-description {
+    font-weight: normal;
+    @include utils.responsive-font-size(14px, 22px);
+}
+
+.track-section-photo {
+    align-self: flex-end;
+    width: 80%;
+    min-width: 300px;
+}
+
+@media (max-width: 1000px) {
+    .track-section-content-wrapper {
+        width: 95%;
+    }
+}
+
+@media (max-width: 780px) {
+    .track-section-text {
+        align-self: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .track-section {
+        height: 500px;
+    }
+
+    .track-section-photo {
+        min-width: 250px;
+    }
+}
