@@ -2,7 +2,7 @@
 
 Landing page with complicated decorations. Has a slider, custom video player and working map
 
-[View the page :eyes:](https://crucials.github.io/lamborghini-super-trofeo-page)
+[View the page :eyes:](https://crucials.github.io/race-page)
 
 ### :hammer: Tecnologies used
 - Webpack :gift:
